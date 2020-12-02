@@ -1,12 +1,12 @@
-// const http = require('http');
-// const url= require('url');
+const http = require('http');
+const url= require('url');
 
-// let server = http.createServer((request,response)=>{
-//     let queryObject=url.parse(request.url,true).query;
-//     if(request.url === '/'){
-//         response.writeHead(200,{'content-type':'text/html'});
-//         response.write('<html><body><h1>Hello ${queryObject.name}</h1><p>This is profile page</p></body></html>');
-//         response.end();
+let server = http.createServer((request,response)=>{
+    let queryObject=url.parse(request.url,true).query;
+    if(request.url === '/profile'){
+        response.writeHead(200,{'content-type':'text/html'});
+        response.write('<html><body><h1>Hello ${queryObject.name}</h1><p>This is profile page</p></body></html>');
+        response.end();
     // }else if(request.url === '/profile') {
     //         response.writeHead(200, {'content-type' : 'text/html'});
     //         response.write('<html><body><h1>Hello IIMS</h1><p>This is profile page</p></body></html>');
