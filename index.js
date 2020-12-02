@@ -1,4 +1,6 @@
 const http = require('http');
+const url = require('url');
+
 
 let server = http.createServer((request,response)=>{
     if(request.url === '/'){
@@ -18,3 +20,4 @@ let server = http.createServer((request,response)=>{
 
 server.listen(8000);
 console.log('Server is running on port:',8000);
+
